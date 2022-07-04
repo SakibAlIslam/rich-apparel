@@ -84,6 +84,7 @@
 
 .facet-filters__field .select {
   width: 150px;
+  outline: none;
 }
 
 .facet-filters__field .select:after,
@@ -91,11 +92,14 @@
 .mobile-facets__sort .select:after,
 .mobile-facets__sort .select:before {
   content: none;
+  border: none;
+  outline: none;
 }
 
 .facet-filters__field .select__select,
 .mobile-facets__sort .select__select {
   border-radius: 0;
+  outline: none;
   min-width: auto;
   min-height: auto;
   transition: none;
