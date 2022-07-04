@@ -97,7 +97,6 @@
         {%- else -%}
           <div class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}">
             <div class="loading-overlay gradient"></div>
-    
             <ul id="product-grid" data-id="{{ section.id }}" class="grid sm:grid-cols-3 grid-cols-1 sm:gap-4">
               {%- for product in collection.products -%}
                 {% assign lazy_load = false %}
