@@ -190,7 +190,7 @@
   display: grid;
   gap: 0 3.5rem;
   grid-template-columns: 1fr max-content max-content;
-  margin-bottom: 0.5rem;
+  margin-bottom: 24px;
 }
 
 .facets__wrapper {
