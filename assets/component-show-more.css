@@ -1,11 +1,27 @@
-
 .button-show-more {
   padding-left: 0;
   justify-content: flex-start;
   padding-bottom: 1.1rem;
 }
 
-.button-show-more, 
+.button-show-more,
 .button-show-less {
   margin-top: 1.5rem;
+}
+.pathStarter-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 21px;
+  color: #c4c4c4;
+}
+.pathAfter-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 21px;
+  color: #111111;
+  letter-spacing: 1px;
 }
