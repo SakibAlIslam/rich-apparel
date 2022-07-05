@@ -128,7 +128,7 @@
   color: #333333;
 }
 .__line{
-  margin-top: 35px;
+  margin-top: 0px;
 }
 .__line:after{
   content: "   ";

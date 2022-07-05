@@ -24,7 +24,6 @@
 }
 
 .pagination__item {
-  color: rgb(var(--color-foreground));
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -33,7 +32,15 @@
   width: 100%;
   padding: 0;
   text-decoration: none;
+
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 27px;
+  color: #777777;
 }
+
 
 a.pagination__item:hover::after {
   height: 0.1rem;
@@ -49,14 +56,19 @@ a.pagination__item:hover::after {
 
 .pagination__item--current::after,
 .pagination__item:hover::after {
-  content: '';
+  background-color: #000000 !important;
+  /* content: '';
   display: block;
   width: 2rem;
   position: absolute;
   bottom: 8px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: currentColor;
+  background-color: currentColor; */
+}
+
+.activePage{
+  color:#000000
 }
 
 .pagination__item--next .icon {

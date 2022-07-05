@@ -96,7 +96,7 @@
       {%- endif -%}
       <!-- section.settings.products_per_page -->
       <div class="product-grid-container" id="ProductGridContainer">
-        {%- paginate collection.products by 20 -%}
+        {%- paginate collection.products by 3 -%}
           {%- if collection.products.size == 0 -%}
             <div class="collection collection--empty" id="product-grid" data-id="{{ section.id }}">
               <div class="loading-overlay gradient"></div>
@@ -134,7 +134,6 @@
               {%- if paginate.pages > 0 -%}
               <div class="__line text-white">.</div>
                 {% render 'pagination', paginate: paginate, anchor: '' %}
-              <div class="__line text-white">.</div>
               {%- endif -%}
             </div>
           {%- endif -%}
