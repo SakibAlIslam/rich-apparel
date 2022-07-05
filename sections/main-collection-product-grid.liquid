@@ -96,7 +96,7 @@
       {%- endif -%}
       <!-- section.settings.products_per_page -->
       <div class="product-grid-container" id="ProductGridContainer">
-        {%- paginate collection.products by 3 -%}
+        {%- paginate collection.products by 4 -%}
           {%- if collection.products.size == 0 -%}
             <div class="collection collection--empty" id="product-grid" data-id="{{ section.id }}">
               <div class="loading-overlay gradient"></div>
@@ -110,7 +110,7 @@
           {%- else -%}
             <div class="collection{% if section.settings.filter_type != 'vertical' %} {% endif %}">
               <div class="loading-overlay gradient"></div>
-              <ul id="product-grid" data-id="{{ section.id }}" class="grid sm:grid-cols-3 grid-cols-1 sm:gap-4">
+              <ul id="product-grid" data-id="{{ section.id }}" class="grid sm:grid-cols-3 grid-cols-1 sm:gap-8">
                 {%- for product in collection.products -%}
                   {% assign lazy_load = false %}
                   {%- if forloop.index > 2 -%}
