@@ -45,10 +45,15 @@
   font-weight: 700;
   font-size: 25px;
   line-height: 47px;
-  /* identical to box height, or 187% */
-
   text-align: center;
-
+  color: #111111;
+}
+.collection-hero__menutitle {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 35px;
   color: #111111;
 }
 
