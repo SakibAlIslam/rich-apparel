@@ -1747,7 +1747,6 @@ details[open] > .share-button__fallback {
 .customer .field input:focus,
 .customer select:focus,
 .localization-form__select:focus.localization-form__select:after {
-  
   outline: 0;
   border-radius: var(--inputs-radius);
 }
@@ -2201,7 +2200,7 @@ input[type="checkbox"] {
   margin-bottom: 0.2rem;
 }
 
-.announcement-bar__link .announcement-bar__message {
+.announcement-bar__link {
   padding: 0;
 }
 
@@ -2209,7 +2208,12 @@ input[type="checkbox"] {
   text-align: center;
   padding: 1rem 2rem;
   margin: 0;
-  letter-spacing: 0.1rem;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 19px;
+  color: #ffffff;
 }
 
 /* section-header */
