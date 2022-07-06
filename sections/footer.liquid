@@ -24,6 +24,50 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
+  .customer_services a{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 27px;
+    color: #777777;
+  }
+  .contact_us p{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    color: #777777;
+  }
+  .contact_us span{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 27px;
+    color: #777777;
+  }
+  .information a{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 27px;
+    color: #777777;
+  }
+  .footer_info_header{
+    margin-bottom: 12px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 24px;
+    letter-spacing: 1.65px;
+    text-transform: uppercase;
+    color: #111111;
+  }
+
   @media screen and (min-width: 750px) {
     <!-- .footer {
       margin-top: {{ section.settings.margin_top }}px;
@@ -226,7 +270,41 @@
     </div>
   {%- endif -%}
 
+
   <div class="footer__content-bottom">
+
+
+    <div class="my-20 flex justify-evenly">
+      <div class="customer_services flex flex-col text-center">
+        <h2 class="footer_info_header">Customer Services</h2>
+        <a href="">Contact Us</a>
+        <a href="">Delivery & Returns</a>
+        <a href="">Terms & Conditions</a>
+        <a href="">Privacy & Cookie Policy</a>
+        <a href="">FAQs</a>
+        <a href="">Klarna</a>
+      </div>
+      <div class="contact_us flex flex-col text-center">
+        <h2 class="footer_info_header">Contact Us</h2>
+        <p>Customer Service</p>
+        <span>+44 (0) 207 0164312</span>
+        <span>Email Us</span>
+        <p>Wholesale Enquiries</p>
+        <span>+44 (0) 207 0164312</span>
+      </div>
+      <div class="information flex flex-col text-center">
+        <h2 class="footer_info_header">Information</h2>
+        <a href="">About Us</a>
+        <a href="">What is Cashmere?</a>
+        <a href="">Our Supply Chain</a>
+        <a href="">Brand Values</a>
+        <a href="">Stories</a>
+        <a href="">Sweater Fit Guide</a>
+        <a href="">Cashmere Care Guide</a>
+        <a href="">Careers</a>
+      </div>
+    </div>
+
     <div class="footer__content-bottom-wrapper page-width">
       <div class="footer__column footer__localization isolate">
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
@@ -318,6 +396,7 @@
           </localization-form>
         {%- endif -%}
       </div>
+
       <div class="footer__column footer__column--info">
         {%- if section.settings.payment_enable -%}
           <div class="footer__payment">
@@ -331,6 +410,7 @@
             </ul>
           </div>
         {%- endif -%}
+
         <div class="footer__copyright caption">
           <small class="copyright__content">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: routes.root_url }}</small>
           <small class="copyright__content">{{ powered_by_link }}</small>
