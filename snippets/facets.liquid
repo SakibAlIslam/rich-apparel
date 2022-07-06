@@ -27,7 +27,7 @@
 <div class="facets-container{% if filter_type == 'drawer' %} facets-container-drawer{% endif %}">
   {%- if filter_type == 'vertical' or filter_type == 'horizontal' -%}
     <facet-filters-form class="facets small-hide">
-      <span class="flex items-center pathStarter-text">Home<h2 class="pathAfter-text">{{ request.path | capitalize }}</h2></span>
+      <span class="flex items-center pathStarter-text">{% render 'breadcrumbs' %}</span>
       <form id="FacetFiltersForm" class="{% if filter_type == 'horizontal' %}facets__form{% else %}facets__form-vertical{% endif %}">
         {%- if results.terms -%}
           <input type="hidden" name="q" value="{{ results.terms | escape }}">
@@ -738,4 +738,3 @@
     </facet-filters-form>
   {%- endif -%}
 </div>
-
