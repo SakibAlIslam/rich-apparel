@@ -129,6 +129,7 @@
 }
 .__line{
   margin-top: 0px;
+  margin-bottom: 22px;
 }
 .__line:after{
   content: "   ";
