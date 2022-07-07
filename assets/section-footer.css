@@ -12,7 +12,7 @@
   display: block;
 }
 .page-width--footer {
-  max-width: var(--page-width);
+  max-width: 80%;
   margin: 0 auto;
 }
 @media screen and (max-width: 749px) {

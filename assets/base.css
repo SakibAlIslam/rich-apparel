@@ -1760,7 +1760,7 @@ details[open] > .share-button__fallback {
 }
 
 .field__newsletter__input{
-  width: 279px;
+  width: 100%;
   padding: 4px 1px;
   border-bottom: 1px solid #777777
 }
