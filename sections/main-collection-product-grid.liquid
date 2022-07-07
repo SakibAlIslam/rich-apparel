@@ -17,7 +17,14 @@
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
-
+  .active{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 35px;
+    color: #000000; 
+  }
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -26,20 +33,29 @@
   }
 {%- endstyle -%}
 <div class="flex">
+  {% if section.settings.menu_item %}
   <div class="w-[17.5%] pl-[32px] pr-10 pt-16 __collection-side-menu">
-    <h2 class="collection-hero__menutitle">{{ collection.title }}</h2>
+    <ul >
+      {% assign currentPath = collection.url | slice: 13, 40 %}
+    {% for item in collections %}
+        <li><a href="{{ item.url }}" class="{% if currentPath == item.handle %} active  {% endif %}" >
+          {{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
     <ul>
-      <li>100% Cashmere</li>
+      <!-- onclick="return myFunc('{{item.title}}')" -->
+      <!-- <li>100% Cashmere</li>
       <li>Cashmere Jumpers 
         & Sweaters</li>
       <li>Cashmere Hoodies</li>
       <li>Cashmere Cardigans</li>
       <li>Cashmere Loungewear</li>
       <li>Cashmere Accessories</li>
-      <li>Shop All</li>
+      <li>Shop All</li> -->
     </ul>
   </div>
-  <div class="w-[65%] section-{{ section.id }}-padding">
+  {% endif %}
+  <div class=" section-{{ section.id }}-padding {% if section.settings.menu_item %} w-[65%] {% else %} w-[65%] ml-[17.5%] {% endif %}">
     {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
     {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
       <facet-filters-form class="facets facets-vertical-sort  small-hide no-js-hidden">
@@ -144,6 +160,20 @@
   </div>
 </div>
 
+<!-- <script>
+ function myFunc(title){
+  localStorage.clear();
+  localStorage.setItem("urlData",title);
+  var getKey = localStorage.getItem('urlData');
+  var lists = document.querySelectorAll(".collection--title");
+  lists.forEach(item => {
+    if(item.innerText == getKey){
+      item.classList.add("active")
+    }
+  })
+ }
+</script> -->
+
 
 {% schema %}
 {
@@ -171,6 +201,11 @@
     {
       "type": "header",
       "content": "t:sections.main-collection-product-grid.settings.header__3.content"
+    },
+    {
+     "type": "checkbox",
+     "id":"menu_item",
+     "label":"Menu Sidebar"
     },
     {
       "type": "select",
